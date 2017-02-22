@@ -12,8 +12,6 @@ var env = process.env;
 const chai = require('chai');
 const expect = chai.expect;
 
-global.Promise = require('bluebird');
-
 describe('Products', function() {
   var MarketPlaceId = env.MarketPlaceId;
 
