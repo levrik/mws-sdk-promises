@@ -38,10 +38,10 @@ describe('Products', function() {
   });
 
   it('list matching product', function (done) {
-    var listMatchingProducts = MWS.Products.requests.ListMatchingProducts({ "marketplaceId": MarketPlaceId });
+    var listMatchingProducts = MWS.Products.requests.ListMatchingProducts({ 'marketplaceId': MarketPlaceId });
     console.log('listMatchingProducts:', listMatchingProducts);
     listMatchingProducts.params.MarketplaceId.value = MarketPlaceId;
-    listMatchingProducts.params.Query.value = "shoe leather casual";
+    listMatchingProducts.params.Query.value = 'shoe leather casual';
     client.invoke(listMatchingProducts)
       .then(function (resp) {
         //console.log(resp);

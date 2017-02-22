@@ -11,9 +11,9 @@ describe('Orders', function() {
 
   
   it('list orders command', function (done) {
-    var listOrders = MWS.Orders.requests.ListOrders({ "marketplaceId": MarketPlaceId });
+    var listOrders = MWS.Orders.requests.ListOrders({ 'marketplaceId': MarketPlaceId });
     listOrders.params.MarketplaceId.value = MarketPlaceId;
-    listOrders.params.CreatedAfter.value = "2015-01-01";
+    listOrders.params.CreatedAfter.value = '2015-01-01';
     client.invoke(listOrders, function (resp) {
       var orders = resp.ListOrdersResponse.ListOrdersResult[0].Orders[0].Order
       console.log(orders.length);
